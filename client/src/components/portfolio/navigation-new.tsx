@@ -1,5 +1,4 @@
-'use client';
-
+/** @jsxImportSource react */
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -12,28 +11,22 @@ const navItems = [
   { href: "#contact", label: "Contact" },
 ] as const;
 
-type NavItem = typeof navItems[number];
-
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("#home");
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = navItems.map(item => item.href);
-      const scrollPosition = window.scrollY;
-      const viewportHeight = window.innerHeight;
+      setIsScrolled(window.scrollY > 50);
 
-      // Find the section that's currently in view
+      // Update active section based on scroll position
+      const sections = navItems.map(item => item.href);
       const currentSection = sections.find(section => {
         const element = document.querySelector(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          const offsetTop = rect.top + scrollPosition;
-          const elementHeight = rect.height;
-          // Check if the section is in the middle of the viewport
-          return scrollPosition >= offsetTop - viewportHeight/2 && 
-                 scrollPosition < offsetTop + elementHeight - viewportHeight/2;
+          return rect.top <= 100 && rect.bottom >= 100;
         }
         return false;
       });
@@ -44,24 +37,22 @@ export default function Navigation() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const handleNavClick = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
+      const navHeight = 48; // height of the navigation bar
       const elementRect = element.getBoundingClientRect();
-      const offsetTop = elementRect.top + window.pageYOffset;
-      const headerOffset = 80;
+      const absoluteElementTop = elementRect.top + window.pageYOffset;
+      const middle = elementRect.height / 2;
+      const offsetPosition = absoluteElementTop - navHeight - middle;
 
       setActiveSection(href);
       
-      // Calculate the position to scroll to
-      const scrollPosition = offsetTop - headerOffset;
-      
       window.scrollTo({
-        top: scrollPosition,
+        top: offsetPosition,
         behavior: 'smooth'
       });
 
@@ -72,7 +63,9 @@ export default function Navigation() {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'glass-nav shadow-lg' : 'glass-nav'
+    }`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-1">
           <div 
@@ -89,7 +82,9 @@ export default function Navigation() {
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="text-foreground/70 hover:text-primary transition-colors font-medium"
+                className={`text-foreground/70 hover:text-primary transition-colors duration-300 font-medium ${
+                  activeSection === item.href ? 'text-primary' : ''
+                }`}
                 data-testid={`nav-${item.label.toLowerCase()}`}
               >
                 {item.label}
@@ -105,11 +100,11 @@ export default function Navigation() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             data-testid="mobile-menu-button"
           >
-            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
@@ -117,7 +112,9 @@ export default function Navigation() {
                 <button
                   key={item.href}
                   onClick={() => handleNavClick(item.href)}
-                  className="text-left text-foreground/70 hover:text-primary transition-colors font-medium py-2"
+                  className={`text-left text-foreground/70 hover:text-primary transition-colors duration-300 font-medium ${
+                    activeSection === item.href ? 'text-primary' : ''
+                  }`}
                   data-testid={`mobile-nav-${item.label.toLowerCase()}`}
                 >
                   {item.label}
