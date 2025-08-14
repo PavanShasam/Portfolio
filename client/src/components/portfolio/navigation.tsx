@@ -74,9 +74,9 @@ export default function Navigation() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-1">
+        <div className="flex justify-between items-center py-3">
           <div 
-            className="text-lg font-bold text-foreground cursor-pointer"
+            className="text-2xl font-bold text-foreground cursor-pointer"
             onClick={() => handleNavClick('#home')}
             data-testid="nav-logo"
           >
@@ -89,7 +89,7 @@ export default function Navigation() {
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="text-foreground/70 hover:text-primary transition-colors font-medium"
+                className="text-lg text-foreground/70 hover:text-primary transition-colors font-medium"
                 data-testid={`nav-${item.label.toLowerCase()}`}
               >
                 {item.label}
