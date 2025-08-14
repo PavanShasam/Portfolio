@@ -10,6 +10,8 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Portfolio} />
+      <Route path="/PavanPortfolio" component={Portfolio} />
+      <Route path="/PavanPortfolio/" component={Portfolio} />
       <Route component={NotFound} />
     </Switch>
   );
