@@ -5,7 +5,7 @@ export default function HeroSection() {
   const handleDownloadResume = () => {
     // Create a download link for the resume
     const link = document.createElement('a');
-    link.href = '/api/download-resume';
+    link.href = `${import.meta.env.BASE_URL}resume.pdf`;
     link.download = 'Ranga_Pavan_Shasam_Resume.pdf';
     document.body.appendChild(link);
     link.click();
