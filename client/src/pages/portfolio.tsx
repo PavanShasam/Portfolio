@@ -1,10 +1,10 @@
-import Navigation from "@/components/portfolio/navigation";
-import HeroSection from "@/components/portfolio/hero-section";
-import AboutSection from "@/components/portfolio/about-section";
-import ExperienceSection from "@/components/portfolio/experience-section";
-import SkillsSection from "@/components/portfolio/skills-section";
-import EducationSection from "@/components/portfolio/education-section";
-import ContactSection from "@/components/portfolio/contact-section";
+import Navigation from "../components/portfolio/navigation";
+import HeroSection from "../components/portfolio/hero-section";
+import AboutSection from "../components/portfolio/about-section";
+import ExperienceSection from "../components/portfolio/experience-section";
+import SkillsSection from "../components/portfolio/skills-section";
+import EducationSection from "../components/portfolio/education-section";
+import ContactSection from "../components/portfolio/contact-section";
 import { Mail, Linkedin, Phone } from "lucide-react";
 
 export default function Portfolio() {
