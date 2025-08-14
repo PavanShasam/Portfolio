@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranga Pavan Shasam - Software Development Engineer in Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#1e293b',
+                        'secondary': '#0ea5e9',
+                        'accent': '#f59e0b',
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="font-inter text-slate-700 bg-slate-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-slate-200 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="font-bold text-xl text-primary">Ranga Pavan Shasam</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-slate-600 hover:text-secondary transition-colors">About</a>
+                    <a href="#skills" class="text-slate-600 hover:text-secondary transition-colors">Skills</a>
+                    <a href="#experience" class="text-slate-600 hover:text-secondary transition-colors">Experience</a>
+                    <a href="#projects" class="text-slate-600 hover:text-secondary transition-colors">Projects</a>
+                    <a href="#contact" class="text-slate-600 hover:text-secondary transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-slate-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-20 bg-gradient-to-br from-primary to-slate-800 text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="mb-8">
+                    <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-secondary to-sky-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-code text-4xl text-white"></i>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-4">Ranga Pavan Shasam</h1>
+                    <h2 class="text-2xl md:text-3xl text-sky-200 mb-6">Software Development Engineer in Test II</h2>
+                    <p class="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+                        Experienced automation engineer specializing in WebUI/API testing with expertise in Selenium, WebDriverIO, and modern testing frameworks
+                    </p>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-accent hover:bg-amber-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
+                        <i class="fas fa-download"></i>
+                        Download Resume
+                    </button>
+                    <button class="border-2 border-sky-300 text-sky-200 hover:bg-sky-300 hover:text-primary px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
+                        <i class="fas fa-eye"></i>
+                        View Portfolio
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-primary mb-12 text-center">About Me</h2>
+                <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-primary mb-4">Professional Profile</h3>
+                            <p class="text-slate-600 mb-6 leading-relaxed">
+                                Experienced Software Quality Test Engineer with expertise in Automation Testing for WebUI/API using cutting-edge testing tools and frameworks. Currently contributing to world-class gaming experiences at Electronic Arts.
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-map-marker-alt text-secondary"></i>
+                                    <span>Hyderabad, Telangana, India</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-briefcase text-secondary"></i>
+                                    <span>5+ Years Experience</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-certificate text-secondary"></i>
+                                    <span>Oracle Certified Associate</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="bg-slate-50 rounded-xl p-6">
+                                <h4 class="font-semibold text-primary mb-2">Current Role</h4>
+                                <p class="text-slate-600">Software Engineer II at Electronic Arts Games</p>
+                            </div>
+                            <div class="bg-slate-50 rounded-xl p-6">
+                                <h4 class="font-semibold text-primary mb-2">Specialization</h4>
+                                <p class="text-slate-600">WebUI/API Automation Testing & Framework Development</p>
+                            </div>
+                            <div class="bg-slate-50 rounded-xl p-6">
+                                <h4 class="font-semibold text-primary mb-2">Education</h4>
+                                <p class="text-slate-600">B.Tech from Keshav Memorial Institute of Technology</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-primary mb-12 text-center">Technical Skills</h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Testing Frameworks -->
+                    <div class="bg-slate-50 rounded-xl p-6">
+                        <h3 class="font-semibold text-primary mb-4 flex items-center gap-2">
+                            <i class="fas fa-vial text-secondary"></i>
+                            Testing Frameworks
+                        </h3>
+                        <div class="space-y-2">
+                            <span class="inline-block bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium">Selenium</span>
+                            <span class="inline-block bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium">WebDriverIO</span>
+                            <span class="inline-block bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium">Katalon Studio</span>
+                            <span class="inline-block bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium">Cucumber</span>
+                        </div>
+                    </div>
+
+                    <!-- Programming Languages -->
+                    <div class="bg-slate-50 rounded-xl p-6">
+                        <h3 class="font-semibold text-primary mb-4 flex items-center gap-2">
+                            <i class="fas fa-code text-secondary"></i>
+                            Languages
+                        </h3>
+                        <div class="space-y-2">
+                            <span class="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium">Java</span>
+                            <span class="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                            <span class="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium">Groovy</span>
+                            <span class="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium">Python</span>
+                        </div>
+                    </div>
+
+                    <!-- Build Tools & Version Control -->
+                    <div class="bg-slate-50 rounded-xl p-6">
+                        <h3 class="font-semibold text-primary mb-4 flex items-center gap-2">
+                            <i class="fas fa-tools text-secondary"></i>
+                            Build & Version Control
+                        </h3>
+                        <div class="space-y-2">
+                            <span class="inline-block bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-medium">Maven</span>
+                            <span class="inline-block bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-medium">Gradle</span>
+                            <span class="inline-block bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-medium">Git</span>
+                            <span class="inline-block bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-medium">Perforce</span>
+                        </div>
+                    </div>
+
+                    <!-- Other Technologies -->
+                    <div class="bg-slate-50 rounded-xl p-6">
+                        <h3 class="font-semibold text-primary mb-4 flex items-center gap-2">
+                            <i class="fas fa-cloud text-secondary"></i>
+                            Other Technologies
+                        </h3>
+                        <div class="space-y-2">
+                            <span class="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">Jenkins</span>
+                            <span class="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">JIRA</span>
+                            <span class="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">Postman</span>
+                            <span class="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">Azure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-primary mb-12 text-center">Professional Experience</h2>
+                
+                <div class="space-y-8">
+                    <!-- EA Experience -->
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-primary">Software Engineer II</h3>
+                                <h4 class="text-xl text-secondary font-medium">Electronic Arts Games</h4>
+                            </div>
+                            <div class="text-right">
+                                <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-medium">Current</span>
+                                <p class="text-slate-500 mt-1">Jan 2023 - Present</p>
+                            </div>
+                        </div>
+                        <ul class="text-slate-600 space-y-2">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check-circle text-emerald-500 mt-1"></i>
+                                <span>Developed automation test cases using WebDriverIO-NodeJS with Mocha framework</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check-circle text-emerald-500 mt-1"></i>
+                                <span>Maintained Robot framework (Python) for image validation on gaming platforms</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check-circle text-emerald-500 mt-1"></i>
+                                <span>Created new API automation framework using Selenium Java with BDD approach</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- DP World Experience -->
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-primary">QA Engineer</h3>
+                                <h4 class="text-xl text-secondary font-medium">DP World</h4>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-slate-500">Feb 2022 - Sep 2022</p>
+                            </div>
+                        </div>
+                        <ul class="text-slate-600 space-y-2">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check-circle text-emerald-500 mt-1"></i>
+                                <span>Developed API automation scripts using Selenium-Java with Page Object Model</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check-circle text-emerald-500 mt-1"></i>
+                                <span>Created automation scripts for Azure Service Bus use-cases</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Informatica Experience -->
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-primary">QA Engineer</h3>
+                                <h4 class="text-xl text-secondary font-medium">Informatica</h4>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-slate-500">Oct 2021 - Feb 2022</p>
+                            </div>
+                        </div>
+                        <ul class="text-slate-600 space-y-2">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check-circle text-emerald-500 mt-1"></i>
+                                <span>Developed WebUI automation scripts using Selenium-Java with Cucumber BDD</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- EPAM Experience -->
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-primary">Software Test Automation Engineer</h3>
+                                <h4 class="text-xl text-secondary font-medium">EPAM Systems</h4>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-slate-500">Jun 2019 - Oct 2021</p>
+                            </div>
+                        </div>
+                        <ul class="text-slate-600 space-y-2">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check-circle text-emerald-500 mt-1"></i>
+                                <span>Developed automation scripts using Cucumber BDD in Katalon Studio-Groovy</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check-circle text-emerald-500 mt-1"></i>
+                                <span>Created WebUI, Mobile, and API automation with custom keywords</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-primary mb-12 text-center">Featured Projects</h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-slate-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                        <div class="mb-4">
+                            <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-robot text-secondary text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-primary mb-2">WebDriverIO Automation Framework</h3>
+                            <p class="text-slate-600 mb-4">Comprehensive test automation framework built with WebDriverIO and Mocha for modern web applications</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-secondary/10 text-secondary px-2 py-1 rounded text-xs">WebDriverIO</span>
+                            <span class="bg-secondary/10 text-secondary px-2 py-1 rounded text-xs">Mocha</span>
+                            <span class="bg-secondary/10 text-secondary px-2 py-1 rounded text-xs">NodeJS</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-slate-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                        <div class="mb-4">
+                            <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-cogs text-accent text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-primary mb-2">API Testing Suite</h3>
+                            <p class="text-slate-600 mb-4">Robust API automation framework using Selenium Java with BDD approach for comprehensive service testing</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-accent/10 text-accent px-2 py-1 rounded text-xs">Java</span>
+                            <span class="bg-accent/10 text-accent px-2 py-1 rounded text-xs">Selenium</span>
+                            <span class="bg-accent/10 text-accent px-2 py-1 rounded text-xs">BDD</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bg-slate-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                        <div class="mb-4">
+                            <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-image text-emerald-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-primary mb-2">Image Validation Framework</h3>
+                            <p class="text-slate-600 mb-4">Python-based Robot framework for automated image validation in gaming platforms</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-emerald-100 text-emerald-700 px-2 py-1 rounded text-xs">Python</span>
+                            <span class="bg-emerald-100 text-emerald-700 px-2 py-1 rounded text-xs">Robot Framework</span>
+                            <span class="bg-emerald-100 text-emerald-700 px-2 py-1 rounded text-xs">Image Processing</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="bg-slate-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                        <div class="mb-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-chart-line text-purple-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-primary mb-2">CI/CD Pipeline Integration</h3>
+                            <p class="text-slate-600 mb-4">Automated testing pipelines integrated with Jenkins for continuous integration and delivery</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Jenkins</span>
+                            <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Maven</span>
+                            <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs">Git</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="bg-slate-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                        <div class="mb-4">
+                            <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-mobile-alt text-sky-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-primary mb-2">Cross-Platform Testing Suite</h3>
+                            <p class="text-slate-600 mb-4">Multi-platform automation covering WebUI, Mobile, and API testing using Katalon Studio</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-sky-100 text-sky-700 px-2 py-1 rounded text-xs">Katalon Studio</span>
+                            <span class="bg-sky-100 text-sky-700 px-2 py-1 rounded text-xs">Groovy</span>
+                            <span class="bg-sky-100 text-sky-700 px-2 py-1 rounded text-xs">Mobile Testing</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="bg-slate-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                        <div class="mb-4">
+                            <div class="w-12 h-12 bg-rose-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-file-code text-rose-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-primary mb-2">Report Generation Tool</h3>
+                            <p class="text-slate-600 mb-4">Custom Python-based tool for generating HTML and XLSX reports from JSON test results</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-rose-100 text-rose-700 px-2 py-1 rounded text-xs">Python</span>
+                            <span class="bg-rose-100 text-rose-700 px-2 py-1 rounded text-xs">HTML</span>
+                            <span class="bg-rose-100 text-rose-700 px-2 py-1 rounded text-xs">Data Processing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certification -->
+    <section class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-primary mb-12 text-center">Education & Certification</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Education -->
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-graduation-cap text-secondary text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-primary">Bachelor of Technology</h3>
+                                <p class="text-slate-600">Keshav Memorial Institute of Technology</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span class="text-slate-600">Duration</span>
+                                <span class="font-medium">2015 - 2019</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate-600">Location</span>
+                                <span class="font-medium">Hyderabad, India</span>
+                            </div>
+                            <div class="pt-3 border-t border-slate-200">
+                                <h4 class="font-semibold text-primary mb-2">Major Project</h4>
+                                <p class="text-slate-600 text-sm">Traffic Growth Analysis using Google Analytics - Focused on web analytics and performance optimization</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certification -->
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-certificate text-accent text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-primary">Oracle Certified Associate</h3>
+                                <p class="text-slate-600">Java SE 8 Programmer</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span class="text-slate-600">Issuer</span>
+                                <span class="font-medium">Oracle Corporation</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate-600">Technology</span>
+                                <span class="font-medium">Java SE 8</span>
+                            </div>
+                            <div class="pt-3 border-t border-slate-200">
+                                <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3">
+                                    <div class="flex items-center gap-2">
+                                        <i class="fas fa-check-circle text-emerald-600"></i>
+                                        <span class="text-emerald-700 font-medium">Verified Professional Certification</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-8">Let's Connect</h2>
+                <p class="text-xl text-slate-300 mb-12">
+                    Ready to discuss automation testing opportunities or collaboration on innovative testing solutions
+                </p>
+                
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <!-- Email -->
+                    <div class="bg-slate-800/50 rounded-xl p-6">
+                        <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-envelope text-secondary text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Email</h3>
+                        <p class="text-slate-300">rangapavan.shasam@gmail.com</p>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="bg-slate-800/50 rounded-xl p-6">
+                        <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-phone text-accent text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Phone</h3>
+                        <p class="text-slate-300">+91 9398630105</p>
+                    </div>
+
+                    <!-- LinkedIn -->
+                    <div class="bg-slate-800/50 rounded-xl p-6">
+                        <div class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fab fa-linkedin text-blue-400 text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">LinkedIn</h3>
+                        <p class="text-slate-300">linkedin.com/in/ranga-pavan-shasam</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-secondary hover:bg-sky-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                    <button class="bg-accent hover:bg-amber-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
+                        <i class="fab fa-linkedin"></i>
+                        Connect on LinkedIn
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <p>&copy; 2024 Ranga Pavan Shasam. All rights reserved.</p>
+                <p class="mt-2 text-sm">Dedicated to excellence in software quality and automation testing</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        (function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add scroll effect to navigation
+            let lastScrollTop = 0;
+            const nav = document.querySelector('nav');
+            
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    nav.style.transform = 'translateY(-100%)';
+                } else {
+                    nav.style.transform = 'translateY(0)';
+                }
+                lastScrollTop = scrollTop;
+            });
+
+            // Add active section highlighting
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+            window.addEventListener('scroll', function() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('text-secondary');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('text-secondary');
+                    }
+                });
+            });
+
+            // TODO: Implement resume download functionality
+            // TODO: Implement contact form submission
+            // TODO: Add project repository links when available
+            // TODO: Implement portfolio project filtering
+        })();
+    </script>
+</body>
+</html>

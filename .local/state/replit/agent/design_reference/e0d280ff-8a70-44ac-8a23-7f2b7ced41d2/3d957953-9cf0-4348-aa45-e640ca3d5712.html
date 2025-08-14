@@ -1,0 +1,360 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Portfolio Generator - Automation Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'github-blue': '#0969da',
+                        'github-gray': '#1f2937',
+                        'success-green': '#059669',
+                        'accent-purple': '#7c3aed'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-inter bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <i class="fab fa-github text-2xl text-github-blue"></i>
+                    <h1 class="text-xl font-semibold text-gray-900">Portfolio Generator</h1>
+                    <span class="text-sm bg-accent-purple text-white px-2 py-1 rounded-full">for Automation Engineers</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="bg-github-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-download"></i>
+                        <span>Export README.md</span>
+                    </button>
+                    <button class="bg-success-green text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-copy"></i>
+                        <span>Copy to Clipboard</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Left Column - Form Inputs -->
+            <div class="space-y-6">
+                <!-- Profile Section -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <i class="fas fa-user-circle text-xl text-github-blue"></i>
+                        <h2 class="text-lg font-semibold text-gray-900">Profile Information</h2>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                            <input type="text" value="Ranga Pavan Shasam" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-github-blue focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Professional Title</label>
+                            <input type="text" value="Software Development Engineer in Test II" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-github-blue focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Location</label>
+                            <input type="text" value="Hyderabad, Telangana, India" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-github-blue focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Professional Bio</label>
+                            <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-github-blue focus:border-transparent" placeholder="Write a compelling bio...">Experienced Software Quality Test Engineer with expertise in Automation Testing in WebUI/API using Testing tools like Cucumber, Selenium, WebDriverIO, Katalon Studio, WebDriver, and RESTful Web services. Passionate about building robust test automation frameworks and ensuring software quality.</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <i class="fas fa-code text-xl text-github-blue"></i>
+                        <h2 class="text-lg font-semibold text-gray-900">Technical Skills</h2>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Programming Languages</label>
+                            <input type="text" value="Java, JavaScript, Python, Groovy" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-github-blue focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Testing Frameworks</label>
+                            <input type="text" value="Selenium, WebDriverIO, Cucumber, TestNG, Mocha, Robot Framework" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-github-blue focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Tools & Technologies</label>
+                            <input type="text" value="Katalon Studio, Postman, JIRA, Jenkins, Maven, Gradle, Git, Perforce" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-github-blue focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Cloud & DevOps</label>
+                            <input type="text" value="Microsoft Azure, CI/CD Pipelines, Azure Service Bus" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-github-blue focus:border-transparent">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <i class="fas fa-address-card text-xl text-github-blue"></i>
+                        <h2 class="text-lg font-semibold text-gray-900">Contact Information</h2>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" value="rangapavan.shasam@gmail.com" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-github-blue focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">LinkedIn Profile</label>
+                            <input type="url" value="https://www.linkedin.com/in/ranga-pavan-shasam" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-github-blue focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Phone (Optional)</label>
+                            <input type="tel" value="+91 9398630105" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-github-blue focus:border-transparent">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Repository Suggestions -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <i class="fas fa-lightbulb text-xl text-accent-purple"></i>
+                        <h2 class="text-lg font-semibold text-gray-900">Suggested Repositories</h2>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="border border-gray-200 rounded-lg p-4 hover:border-github-blue transition-colors">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-medium text-gray-900">selenium-java-framework</h3>
+                                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Suggested</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">Complete Selenium WebDriver framework with Java, TestNG, and Page Object Model implementation</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Java</span>
+                                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Selenium</span>
+                                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">TestNG</span>
+                            </div>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-4 hover:border-github-blue transition-colors">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-medium text-gray-900">webdriverio-mocha-automation</h3>
+                                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Suggested</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">Modern WebDriverIO automation framework with Mocha and JavaScript/TypeScript support</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">JavaScript</span>
+                                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">WebDriverIO</span>
+                                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Mocha</span>
+                            </div>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-4 hover:border-github-blue transition-colors">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-medium text-gray-900">api-testing-framework</h3>
+                                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Suggested</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">RESTful API testing framework with Cucumber BDD and comprehensive reporting</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Java</span>
+                                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">REST Assured</span>
+                                <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Cucumber</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Live Preview -->
+            <div class="sticky top-24">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-eye text-xl text-success-green"></i>
+                            <h2 class="text-lg font-semibold text-gray-900">Live Preview</h2>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button class="text-sm bg-gray-100 text-gray-700 px-3 py-1 rounded hover:bg-gray-200 transition-colors">
+                                <i class="fas fa-code mr-1"></i> Markdown
+                            </button>
+                            <button class="text-sm bg-github-blue text-white px-3 py-1 rounded hover:bg-blue-700 transition-colors">
+                                <i class="fas fa-eye mr-1"></i> Preview
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-6 max-h-[70vh] overflow-y-auto">
+                        <!-- Generated README Preview -->
+                        <div class="prose prose-sm max-w-none">
+                            <div class="text-center mb-8">
+                                <h1 class="text-3xl font-bold text-gray-900 mb-2">👋 Hi, I'm Ranga Pavan Shasam</h1>
+                                <p class="text-lg text-gray-600">Software Development Engineer in Test II</p>
+                                <p class="text-gray-500">📍 Hyderabad, Telangana, India</p>
+                            </div>
+                            
+                            <!-- Professional badges -->
+                            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                                <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" class="h-6">
+                                <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" class="h-6">
+                                <img src="https://img.shields.io/badge/Oracle%20Certified-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle Certified" class="h-6">
+                            </div>
+                            
+                            <h2 class="text-xl font-semibold text-gray-900 mb-4">🚀 About Me</h2>
+                            <p class="text-gray-700 mb-6">Experienced Software Quality Test Engineer with expertise in Automation Testing in WebUI/API using Testing tools like Cucumber, Selenium, WebDriverIO, Katalon Studio, WebDriver, and RESTful Web services. Passionate about building robust test automation frameworks and ensuring software quality.</p>
+                            
+                            <h2 class="text-xl font-semibold text-gray-900 mb-4">🛠️ Tech Stack</h2>
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div>
+                                    <h3 class="font-medium text-gray-800 mb-2">Languages</h3>
+                                    <div class="flex flex-wrap gap-1">
+                                        <span class="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded">Java</span>
+                                        <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">JavaScript</span>
+                                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Python</span>
+                                        <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">Groovy</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium text-gray-800 mb-2">Testing Frameworks</h3>
+                                    <div class="flex flex-wrap gap-1">
+                                        <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Selenium</span>
+                                        <span class="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded">WebDriverIO</span>
+                                        <span class="text-xs bg-teal-100 text-teal-800 px-2 py-1 rounded">Cucumber</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h2 class="text-xl font-semibold text-gray-900 mb-4">📊 GitHub Stats</h2>
+                            <div class="bg-white p-4 rounded-lg border border-gray-200 mb-6">
+                                <p class="text-sm text-gray-600 italic">GitHub stats widgets would appear here in the actual README</p>
+                            </div>
+                            
+                            <h2 class="text-xl font-semibold text-gray-900 mb-4">🏆 Featured Projects</h2>
+                            <div class="space-y-4 mb-6">
+                                <div class="border border-gray-200 rounded-lg p-4">
+                                    <h3 class="font-medium text-gray-900">🔧 Selenium Java Framework</h3>
+                                    <p class="text-sm text-gray-600">Complete automation framework with Page Object Model</p>
+                                </div>
+                                <div class="border border-gray-200 rounded-lg p-4">
+                                    <h3 class="font-medium text-gray-900">⚡ WebDriverIO Mocha Suite</h3>
+                                    <p class="text-sm text-gray-600">Modern JavaScript automation testing framework</p>
+                                </div>
+                            </div>
+                            
+                            <h2 class="text-xl font-semibold text-gray-900 mb-4">📫 Let's Connect</h2>
+                            <p class="text-gray-700">Feel free to reach out for collaboration or just a friendly chat about test automation!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Organization Tips Section -->
+        <div class="mt-12">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
+                <div class="flex items-center space-x-3 mb-8">
+                    <i class="fas fa-star text-xl text-accent-purple"></i>
+                    <h2 class="text-2xl font-semibold text-gray-900">GitHub Organization Best Practices</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <i class="fas fa-thumbtack text-accent-purple"></i>
+                            <h3 class="font-semibold text-gray-900">Pinned Repositories</h3>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>• Pin your best 6 repositories</li>
+                            <li>• Include diverse project types</li>
+                            <li>• Showcase different technologies</li>
+                            <li>• Keep descriptions concise</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <i class="fas fa-folder text-accent-purple"></i>
+                            <h3 class="font-semibold text-gray-900">Naming Conventions</h3>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>• Use kebab-case consistently</li>
+                            <li>• Include technology in name</li>
+                            <li>• Be descriptive but concise</li>
+                            <li>• Group related projects</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <i class="fas fa-file-alt text-accent-purple"></i>
+                            <h3 class="font-semibold text-gray-900">Documentation</h3>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>• Comprehensive README files</li>
+                            <li>• Include setup instructions</li>
+                            <li>• Add usage examples</li>
+                            <li>• Document architecture</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            // TODO: Implement form data binding and live preview updates
+            // TODO: Add export functionality for README.md
+            // TODO: Implement copy to clipboard feature
+            // TODO: Add form validation and error handling
+            // TODO: Store form data in localStorage for persistence
+            
+            // Simple form interaction demo
+            const inputs = document.querySelectorAll('input, textarea');
+            inputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    // TODO: Update live preview based on form changes
+                    console.log('Form updated:', this.name, this.value);
+                });
+            });
+            
+            // Export button functionality
+            const exportBtn = document.querySelector('button:has(.fa-download)');
+            exportBtn?.addEventListener('click', function() {
+                // TODO: Generate and download README.md file
+                alert('Export functionality would generate and download the README.md file');
+            });
+            
+            // Copy to clipboard functionality
+            const copyBtn = document.querySelector('button:has(.fa-copy)');
+            copyBtn?.addEventListener('click', function() {
+                // TODO: Copy generated markdown to clipboard
+                alert('Markdown content would be copied to clipboard');
+            });
+        })();
+    </script>
+</body>
+</html>
