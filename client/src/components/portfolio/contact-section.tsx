@@ -36,14 +36,16 @@ export default function ContactSection() {
         
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {contactMethods.map((method, index) => (
-            <div key={index} className="skill-card text-center" data-testid={method.testId}>
+            <div key={index} className="p-6 rounded-lg bg-card hover:bg-accent/10 transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md text-center" data-testid={method.testId}>
               <div className="flex justify-center mb-4">
-                {method.icon}
+                <div className="p-3 rounded-full bg-primary/10 text-primary">
+                  {method.icon}
+                </div>
               </div>
               <h3 className="text-lg font-semibold mb-2 text-foreground">{method.title}</h3>
               <a 
                 href={method.href}
-                className="text-primary hover:text-primary/80 transition-colors text-sm"
+                className="text-primary hover:text-primary/80 transition-colors text-sm hover:underline"
                 target={method.href.startsWith('http') ? '_blank' : undefined}
                 rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
               >

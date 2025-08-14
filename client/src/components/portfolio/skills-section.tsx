@@ -66,7 +66,7 @@ export default function SkillsSection() {
               {category.skills.map((skill, skillIndex) => (
                 <div 
                   key={skillIndex}
-                  className="skill-card text-center"
+                  className="skill-card text-center p-4 rounded-lg bg-card hover:bg-accent/10 transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md"
                   data-testid={`skill-${categoryIndex}-${skillIndex}`}
                 >
                   <div className="flex justify-center mb-3">

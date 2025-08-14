@@ -20,13 +20,13 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="pt-20 pb-12 min-h-screen flex items-center bg-background">
+    <section id="home" className="pt-12 pb-12 min-h-screen flex items-center bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="text-center">
           <div className="mb-8">
             {/* Professional profile image placeholder - similar to Vimal's circular profile */}
             <div 
-              className="w-32 h-32 mx-auto bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center text-white text-3xl font-bold shadow-xl border-4 border-white"
+              className="w-40 h-40 mx-auto bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center text-white text-3xl font-bold shadow-xl border-4 border-white hover:scale-105 transition-transform duration-300"
               data-testid="profile-avatar"
             >
               RPS
