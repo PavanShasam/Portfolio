@@ -20,7 +20,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="pt-8 pb-8 min-h-[90vh] flex items-center bg-background">
+    <section id="home" className="pt-4 pb-4 min-h-[85vh] flex items-center bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="text-center">
           <div className="mb-8">
