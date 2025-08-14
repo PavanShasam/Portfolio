@@ -36,7 +36,7 @@ jobs:
       - name: Build
         run: |
           npm run build
-          cp dist/index.html dist/404.html
+          cp dist/index.html dist/404.html || true  # Continue even if copy fails
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
