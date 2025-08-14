@@ -1,4 +1,6 @@
-import { GraduationCap, Award } from "lucide-react";
+impor    <section className="py-10 bg-muted">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8"> GraduationCap, Award } from "lucide-react";
 import { SiOracle } from "react-icons/si";
 
 export default function EducationSection() {

@@ -71,9 +71,9 @@ const experiences = [
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="py-16 bg-muted/50">
+    <section id="experience" className="py-10 bg-muted/50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="section-header" data-testid="experience-title">Professional Experience</h2>
           <div className="section-divider"></div>
         </div>
