@@ -34,9 +34,12 @@ export default function ContactSection() {
           <div className="section-divider"></div>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
           {contactMethods.map((method, index) => (
-            <div key={index} className="text-center" data-testid={method.testId}>
+            <div key={index} className="skill-card text-center" data-testid={method.testId}>
+              <div className="flex justify-center mb-4">
+                {method.icon}
+              </div>
               <h3 className="text-lg font-semibold mb-2 text-foreground">{method.title}</h3>
               <a 
                 href={method.href}
