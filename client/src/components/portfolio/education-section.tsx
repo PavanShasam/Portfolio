@@ -1,13 +1,11 @@
-impor    <section className="py-10 bg-muted">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8"> GraduationCap, Award } from "lucide-react";
+import { GraduationCap, Award } from "lucide-react";
 import { SiOracle } from "react-icons/si";
 
 export default function EducationSection() {
   return (
-    <section className="py-16 bg-muted">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+    <section className="py-10 bg-muted">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8">
           <h2 className="section-header" data-testid="education-title">Education & Certifications</h2>
           <div className="section-divider"></div>
         </div>
