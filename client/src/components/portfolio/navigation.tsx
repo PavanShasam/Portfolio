@@ -26,7 +26,7 @@ export default function Navigation() {
   const handleNavClick = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      const navHeight = 64; // height of the navigation bar
+      const navHeight = 48; // height of the navigation bar
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - navHeight;
 
@@ -43,9 +43,9 @@ export default function Navigation() {
       isScrolled ? 'glass-nav shadow-lg' : 'glass-nav'
     }`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-1">
           <div 
-            className="text-xl font-bold text-foreground cursor-pointer"
+            className="text-lg font-bold text-foreground cursor-pointer"
             onClick={() => handleNavClick('#home')}
             data-testid="nav-logo"
           >

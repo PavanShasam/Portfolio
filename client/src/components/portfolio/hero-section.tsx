@@ -20,10 +20,10 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="pt-4 pb-4 min-h-[85vh] flex items-center bg-background">
+    <section id="home" className="pt-2 pb-2 min-h-[80vh] flex items-center bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="text-center">
-          <div className="mb-8">
+          <div className="mb-4">
             {/* Professional profile image placeholder - similar to Vimal's circular profile */}
             <div 
               className="w-40 h-40 mx-auto bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center text-white text-3xl font-bold shadow-xl border-4 border-white hover:scale-105 transition-transform duration-300"
