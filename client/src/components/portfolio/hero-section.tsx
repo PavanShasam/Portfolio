@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "../ui/button";
 import { Download, Mail, Linkedin, Phone } from "lucide-react";
 
 export default function HeroSection() {
