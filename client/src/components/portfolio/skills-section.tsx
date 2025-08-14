@@ -47,9 +47,9 @@ const skillCategories = [
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="py-10 bg-background">
+    <section id="skills" className="py-8 bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
+        <div className="text-center mb-6">
           <h2 className="section-header" data-testid="skills-title">Technical Skills</h2>
           <div className="section-divider"></div>
         </div>

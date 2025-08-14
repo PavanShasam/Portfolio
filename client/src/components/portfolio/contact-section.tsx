@@ -27,9 +27,9 @@ const contactMethods = [
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-10 bg-background">
+    <section id="contact" className="py-8 bg-background">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
+        <div className="text-center mb-6">
           <h2 className="section-header" data-testid="contact-title">Get In Touch</h2>
           <div className="section-divider"></div>
         </div>
