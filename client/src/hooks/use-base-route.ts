@@ -1,7 +1,7 @@
 import { useLocation, useRoute } from "wouter";
 
 export function useBasePath() {
-  return "/PavanPortfolio";
+  return "/Portfolio";
 }
 
 export function useBaseRoute(pattern: string) {

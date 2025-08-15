@@ -6,10 +6,10 @@
     <script>
       // Get the current path
       var path = window.location.pathname;
-      // Remove /PavanPortfolio if it exists at the start
-      path = path.replace(/^\/PavanPortfolio/, '');
+      // Remove /Portfolio if it exists at the start
+      path = path.replace(/^\/Portfolio/, '');
       // Redirect to the index.html with the path as a query parameter
-      window.location.replace(window.location.origin + '/PavanPortfolio/?p=' + encodeURIComponent(path));
+      window.location.replace(window.location.origin + '/Portfolio/?p=' + encodeURIComponent(path));
     </script>
   </head>
   <body>
