@@ -11,7 +11,7 @@ export default function AboutSection() {
         
         <div className="text-center">
           <p className="text-lg text-muted-foreground leading-relaxed mb-8" data-testid="summary-paragraph">
-            QA Automation Engineer with 6+ years of experience in web and API testing using Selenium (Java), WebDriverIO, 
+            QA Automation Engineer with 7+ years of experience in web and API testing using Selenium (Java), Katalon Studio, WebDriverIO, 
             Cucumber BDD, Postman, and SQL for data validation. Proficient in Maven, Git, Perforce, JIRA, 
             and reporting tools, with a strong record of delivering quality software in Agile/Scrum environments.
           </p>
